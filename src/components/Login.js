@@ -25,7 +25,7 @@ function Login() {
            history.push("/")
         }
     catch{
-        alert("Error occured")
+        console.log("Error occured")
     }
      }
 
@@ -37,6 +37,9 @@ function Login() {
             <div className="w-full max-w-xs">
             Login 
                 <form  onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <button onClick={()=>login("aoduw@gmail.com","aoduw@gmail.com").then(()=>history.push("/"))}className="bg-red-400 hover:bg-red-700 shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-white">
+                  Login with Dummy account?
+              </button>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
                         Email
@@ -63,6 +66,7 @@ function Login() {
                 <div className="flex items-center justify-between">
                 <Link className="inline-block align-baseline  font-bold text-sm text-green-500 hover:text-green-800" to="/signup" >
                             New user? Register.
+                            
       </Link>
                 </div>
               
