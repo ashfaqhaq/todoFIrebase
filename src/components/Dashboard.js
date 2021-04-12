@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React,{useState,useEffect,useRef} from 'react'
+import React,{useState,useEffect} from 'react'
 import {db} from "../firebase/firebase"
 import { useAuth } from "../context/AuthContext"
 function Dashboard() {
 
 
-    const { currentUser,logout } = useAuth()
+    const { currentUser } = useAuth()
    
     function toggleInProgress(item) {
       notesRef.collection("todos").doc(item.id).update({
