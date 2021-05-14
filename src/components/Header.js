@@ -9,21 +9,21 @@ function Header() {
         <div className="mt-5">
           
                 
-  <div class="flex justify-around items-center flex-shrink-0 text-black text-5xl font-bold mr-6">
+  <div className="flex justify-around items-center flex-shrink-0 text-black text-5xl font-bold mr-6 dance-font">
    Karlo
   </div>
  
   
-  <div className="flex justify-around mt-5">
+  <div className="flex justify-around mt-5 dance-font  text-2xl bg-black  py-2 px-3 rounded ">
      
-      {location.pathname==="/"? <button onClick={()=>logout()} class="">
+      {location.pathname==="/"? <button onClick={()=>logout()} className="text-red-400">
         Logout
       </button>:<>
-      <Link to="/signup" class=" ">
+      <Link to="/signup" className="text-white">
         Sign up 
       </Link>
      
-      <Link to="/login" class="">
+      <Link to="/login" className="text-white">
         Login
       </Link>
       </>

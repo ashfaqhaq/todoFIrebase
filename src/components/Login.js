@@ -14,7 +14,11 @@ function Login() {
      const history  = useHistory()
 
    
-
+ async function handleLoginPublic(e){
+     e.preventDefault();
+    await login("aoduw@gmail.com","aoduw@gmail.com")
+    history.push("/");
+ }
 
    async function handleSubmit(e){
         e.preventDefault();
@@ -26,6 +30,7 @@ function Login() {
         }
     catch{
         console.log("Error occured")
+       
     }
      }
 
@@ -37,7 +42,7 @@ function Login() {
             <div className="w-full max-w-xs">
             Login 
                 <form  onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <button onClick={()=>login("aoduw@gmail.com","aoduw@gmail.com").then(()=>history.push("/"))}className="bg-red-400 hover:bg-red-700 shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-white">
+                <button onClick={handleLoginPublic}className="bg-red-400 hover:bg-red-700 shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-white">
                   Login with Dummy account?
               </button>
                     <div className="mb-4">

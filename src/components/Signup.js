@@ -27,8 +27,8 @@ function Signup() {
            alert("signup successfull")
            history.push("/")
         }
-    catch{
-
+    catch(err){
+        console.log(err);
         alert("Error occured")
         setIsLoading(false)
     }
