@@ -1,4 +1,8 @@
-import firebase from 'firebase/app'
+import  firebase  from 'firebase/app';
+import 'firebase/firestore'
+import 'firebase/auth';
+import 'firebase/storage';
+
 const firebaseConfig = {
   apiKey: "AIzaSyDc2sBF1cLAD719tsjO26Xlu8kxIVwGK84",
   authDomain: "tutorial-1bfbb.firebaseapp.com",
@@ -10,7 +14,10 @@ const firebaseConfig = {
   measurementId: "G-N0GXKK4PCQ"
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  var firebaseApp =  firebase.initializeApp(firebaseConfig)
+}
+// const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 window.firebase = firebaseApp
 const auth = firebase.auth();
